@@ -5,8 +5,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export const TermsScreen = () => {
   function goBack() {
-    // We need to use the screen props `{navigation}` to navigate back
-    // it will be introduced in the next lesson `react-navigation`
     alert("goBack pressed!");
   }
   return (

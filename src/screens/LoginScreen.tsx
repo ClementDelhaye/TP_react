@@ -1,14 +1,18 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { TextInput } from 'react-native-paper';
 import { Button } from 'react-native-paper';
-
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
+import { Routes } from '../navigation/Route';
+import { useNavigation } from '@react-navigation/native';
 
 export default function App() {
-  const [text, setText] = React.useState("");
+  const [text, setText] = useState("");
+  const navigation = useNavigation<any>();
+  
+  function navigateToTerms() {
+    navigation.navigate(Routes.TERMS_SCREEN);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.fondTitle}>
@@ -33,7 +37,9 @@ export default function App() {
         <Button style={styles.bouton} mode="contained" onPress={() => console.log('Pressed')}>
           Login
         </Button>
-        <Text style={styles.terms}>Read Terms and conditions.</Text>
+        <TouchableOpacity onPress={navigateToTerms}>
+          <Text style={styles.terms}>Read Terms and conditions.</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
