@@ -11,8 +11,10 @@ function Navigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
-        <Stack.Screen name={Routes.STARSHIP_FEED_SCREEN} component={StarshipFeedScreen} />
+        <Stack.Group screenOptions={{ headerShown: false }}>
+          <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
+        </Stack.Group>
+        <Stack.Screen name={Routes.STARSHIP_FEED_SCREEN} component={StarshipFeedScreen} />  
         <Stack.Screen name={Routes.TERMS_SCREEN} component={TermsScreen} />
       </Stack.Navigator>
     </NavigationContainer>

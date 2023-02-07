@@ -4,16 +4,16 @@ import { Appbar, Text } from "react-native-paper";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export const TermsScreen = () => {
-  function goBack() {
+  /*function goBack() {
     alert("goBack pressed!");
-  }
+  }*/
   return (
     <SafeAreaProvider>
       <View>
-        <Appbar.Header>
+        {/*<Appbar.Header>
             <Appbar.BackAction onPress={goBack} />
             <Appbar.Content title="Terms and Conditions" />
-        </Appbar.Header>
+  </Appbar.Header>*/}
         <ScrollView style={{ padding: 32 }}>
             <Text variant="bodyMedium" style={{ marginBottom: 24 }}>
             This Terms of Service, including all supplemental terms as amended
