@@ -13,6 +13,9 @@ export default function App() {
   function navigateToTerms() {
     navigation.navigate(Routes.TERMS_SCREEN);
   }
+  function navigateToStarships() {
+    navigation.navigate(Routes.STARSHIP_FEED_SCREEN);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.fondTitle}>
@@ -34,7 +37,7 @@ export default function App() {
           value={text}
           onChangeText={text => setText(text)}
         />
-        <Button style={styles.bouton} mode="contained" onPress={() => console.log('Pressed')}>
+        <Button style={styles.bouton} mode="contained" onPress={navigateToStarships}>
           Login
         </Button>
         <TouchableOpacity onPress={navigateToTerms}>
